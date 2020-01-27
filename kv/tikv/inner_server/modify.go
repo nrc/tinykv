@@ -1,10 +1,11 @@
 package inner_server
 
+// ModifyType is the smallest unit of mutation of TinyKV's underlying storage (i.e., raw key/values on disk(s))
 type ModifyType int64
 
 const (
-	ModifyTypePut    ModifyType = 0
-	ModifyTypeDelete ModifyType = 1
+	ModifyTypePut    ModifyType = 1
+	ModifyTypeDelete ModifyType = 2
 )
 
 type Put struct {
